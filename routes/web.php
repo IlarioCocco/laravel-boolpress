@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/', 'PageController@index');
+Route::get('/blog', 'PostController@index'); //definiamo la Rotta
 
 
 //Rotte di Autenticazione che ci fornisce Laravel per far Funzionare tutto(login,autentcazione,cambio password logout, ecc..)

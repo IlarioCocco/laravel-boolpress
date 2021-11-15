@@ -3,6 +3,11 @@
 
       <div class="row">
         <div class="col-md-8 blog-main">
+            <h1 class="blog-post-title">{{$post["title"]}}</h1>
+                <p class="blog-post-meta">{{$post->created_at->diffForHumans()}}<a href="#">Jacob</a></p>
+            <p>
+                {{$post["content"]}}
+            </p>
 
         </div><!-- /.blog-main -->
 

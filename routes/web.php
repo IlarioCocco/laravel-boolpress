@@ -32,7 +32,7 @@ Route::middleware('auth') //funzione di controllo login/logout, verifica se l'ut
 ->name('admin.') //il name è il nome delle nostre Rotte (es: admin.home, vedi sotto)
 ->prefix('admin') // il prefisso è /admin/ stesso, divide le url del(Front office:localhost:8000) dal(Back office /admin/home)
 ->group(function() { // group applica tutte le regole sopra raggrupandole internamente alla funzione group{}
-    Route::get('/home', 'HomeController@index')->name('home'); //admin.home
+    Route::get('/', 'HomeController@index')->name('home'); //admin.home
     Route::resource('posts', 'PostController');
 });
 

@@ -13,11 +13,23 @@
                         @csrf
                         <div class="form-group">
                             <label for="title">Titolo</label>
-                            <input type="text" class="form-control" id="title" name="title" placeholder="scrivi il Titolo">
+                            <input type="text" class="form-control" @error('title') is-invalid @enderror 
+                            name="title" id="title" placeholder="scrivi il Titolo">
+                            
+                            @error('title')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+
                         </div>
                         <div class="form-group">
                             <label for="content">Contenuto</label>
-                            <textarea class="form-control" name="content" id="content" cols="30" rows="10" placeholder="scrivi il Testo"></textarea>
+                            <textarea class="form-control" @error('content') is-invalid @enderror 
+                            name="content" id="content" cols="30" rows="10" placeholder="scrivi il Testo"></textarea>
+
+                            @error('content')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+
                         </div>
                         <button type="submit" class="btn btn-success">Scrivi</button>
                     </form>

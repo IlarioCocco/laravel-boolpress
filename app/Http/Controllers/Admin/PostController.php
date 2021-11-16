@@ -42,7 +42,22 @@ class PostController extends Controller
         // dd($request->all()); debug
 
         //validation
-        $request->validate(['title' =>'string|required|max:100', 'content' =>'string|required']);
+        $request->validate([
+            'title' => 'string|required|max:100',
+            'content' => 'string|required'
+        ]);
+        
+        $newPost = new Post();
+        $newPost->fill($request->all());
+
+        $slug = Str::of($request->title)->slug('-');
+
+        $newPost->slug = $slug;
+
+        $newPost->save();
+
+        //reindirizzamento
+        return redirect()->route("admin.posts.index")->with("success","il post è stato cre");
     }
 
     /**

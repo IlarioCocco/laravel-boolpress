@@ -21,6 +21,7 @@
                                 <th scope="col">Title</th>
                                 <th scope="col">Slug</th>
                                 <th scope="col">Action</th>
+                                <th scope="col">Upload</th>
                                 <th scope="col">Delete</th>
                             </tr>
                         </thead>
@@ -30,11 +31,19 @@
                                 <td>{{$post["id"]}}</td>
                                 <td>{{$post["title"]}}</td>
                                 <td>{{$post["slug"]}}</td>
+
                                 <td>
                                     <a href="{{route("admin.posts.show", $post["id"])}}">
                                         <button type="button" class="btn btn-primary">Visualizza</button>
                                     </a>
                                 </td>
+
+                                 <td>
+                                    <a href="{{route("admin.posts.edit", $post["id"])}}">
+                                        <button type="button" class="btn btn-warning">Modifica</button>
+                                    </a>
+                                </td>
+
                                 <td>
                                     <form action="{{route("admin.posts.destroy", $post["id"])}}" method="POST">
                                         @csrf
@@ -42,6 +51,7 @@
                                         <button type="submit" class="btn btn-danger">Cancel</button>
                                     </form>
                                 </td>
+                                
                             </tr>
                             @endforeach
                         </tbody>

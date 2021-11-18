@@ -33,7 +33,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li><a class="nav-link" href="{{route("admin.posts.index")}}">tutti i post</a></li>
+                        <li><a class="nav-link" href="{{route("admin.posts.create")}}">scrivi un post</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

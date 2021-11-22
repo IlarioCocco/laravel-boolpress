@@ -21,7 +21,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/admin'; //Rotta di login base in Laravel decisa da noi
+    public const HOME = '/admin';            //--- Rotta di login base in Laravel decisa da noi    IMPORTANTE  !!!
 
     /**
      * Define your route model bindings, pattern filters, etc.

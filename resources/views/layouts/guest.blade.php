@@ -32,7 +32,7 @@
             <a class="text-dark" href="#">Subscribe</a>
           </div>
           <div class="col-4 text-center">
-            <a class="blog-header-logo text-dark" href="#">Laravel Boolpress</a>
+            <a class="blog-header-logo text-dark" href="{{route("homepage")}}">Laravel Boolpress</a>
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
             <a class="text-dark" href="#">
@@ -45,9 +45,11 @@
       </header>
 
       <div class="nav-scroller py-1 mb-2">
-        <nav class="nav d-flex justify-content-between">
-          <a class="p-2 text-dark" href="#">World</a>
-          <a class="p-2 text-dark" href="#">U.S.</a>
+        <nav class="nav ">
+          <a class="p-2 text-dark" href="{{route("homepage")}}">Home</a>
+          <a class="p-2 text-dark" href="{{route("posts.index")}}">Blog</a>
+          <a class="p-2 text-dark" href="{{route("posts.index")}}">Chi Sono</a>
+          <a class="p-2 text-dark" href="{{route("posts.index")}}">Contatti</a>
         </nav>
       </div>
 

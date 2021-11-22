@@ -11,4 +11,14 @@ class PageController extends Controller
         return view("guest.welcome");
         //ci restituisce la welcome page (welcome.blade.php)
     }
+
+    public function about()
+    {
+        return view("guest.about");
+    }
+
+    public function contact()
+    {
+        return view("guest.contact");
+    }
 }

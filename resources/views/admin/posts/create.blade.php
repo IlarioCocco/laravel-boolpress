@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    {{-- @dd($categories) --}}
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
@@ -29,8 +30,19 @@
                             @error('content')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
-
                         </div>
+
+                        <div class="form-group">
+
+                             <label for="category">Catetgoria</label>
+                             <select name="category_id" class="form-control">
+                                  <option value="">-- Seleziona una categoria --</option>
+                                  @foreach ($categories as $category)
+                                    <option value="">{{$category["id"]}}</option>
+                                  @endforeach
+                             </select>
+                        </div>
+
                         <button type="submit" class="btn btn-success">Scrivi</button>
                     </form>
 
